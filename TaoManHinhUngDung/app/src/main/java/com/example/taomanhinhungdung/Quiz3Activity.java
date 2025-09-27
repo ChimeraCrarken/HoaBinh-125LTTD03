@@ -1,12 +1,12 @@
 package com.example.taomanhinhungdung;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class Quiz1Activity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Quiz3Activity extends AppCompatActivity {
 
     Button btnA, btnB, btnC, btnD;
 
@@ -27,13 +27,13 @@ public class Quiz1Activity extends AppCompatActivity {
         btnD.setText("22");
 
         btnA.setOnClickListener(v -> restartQuiz());
-        btnB.setOnClickListener(v -> startActivity(new Intent(this, Quiz2Activity.class)));
+        btnD.setOnClickListener(v -> startActivity(new Intent(this, Quiz4Activity.class)));
         btnC.setOnClickListener(v -> restartQuiz());
-        btnD.setOnClickListener(v -> restartQuiz());
+        btnB.setOnClickListener(v -> restartQuiz());
     }
 
     private void restartQuiz() {
-        Intent restart = new Intent(Quiz1Activity.this, Quiz1Activity.class);
+        Intent restart = new Intent(Quiz3Activity.this, Quiz3Activity.class);
         restart.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(restart);
         finish();
